@@ -9,7 +9,16 @@ export const coinCounter = (amount) => {
     coinPurse.quaters = Math.floor(amount / .25);
     // amount = Math.fround(amount % .25).toPrecision(2);
     amount = parseFloat(amount % .25).toPrecision(2);
-    return coinPurse.quaters;
+    //return coinPurse.quaters;
+    return coinCounter(amount);
+  }
+  // else {
+  //   return coinCounter(amount);
+  // }
+
+  if (amount >= .1) {
+    coinPurse.dimes = Math.floor(amount / .1);
+    return coinPurse.dimes;
   }
 
 
