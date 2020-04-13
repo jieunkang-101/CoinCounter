@@ -20,7 +20,10 @@ A coin counter application that takes X amount of money (such as $4.99) and dete
 
 | Behavior(Spec)  | Input | Output  |
 | :---------------- | :-----: | :-----: |
-
+| Application determines the amount to convert user's input money into a quarter | $ 7.41 | quarters: 29 |
+| Application determines the amount to convert user's input money into a dime | $ 7.41 | dimes: 1 |
+| Application determines the amount to convert user's input money into a nickel | $ 7.41 | nickels: 1 |
+| Application determines the amount to convert user's input money into a penny | $ 7.41 | pennies: 1 |
 
 ## Technologies Used
 
