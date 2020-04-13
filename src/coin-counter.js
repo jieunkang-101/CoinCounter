@@ -12,14 +12,19 @@ export const coinCounter = (amount) => {
     //return coinPurse.quaters;
     return coinCounter(amount);
   }
-  // else {
-  //   return coinCounter(amount);
-  // }
 
   if (amount >= .1) {
     coinPurse.dimes = Math.floor(amount / .1);
-    return coinPurse.dimes;
+    amount = parseFloat(amount % .1).toPrecision(2);
+    //return coinPurse.dimes;
+    return coinCounter(amount);
   }
 
+  if (amount >= .05) {
+    coinPurse.nickels = Math.floor(amount / .05);
+    amount = parseFloat(amount % .05).toPrecision(2);
+    //return coinPurse.nickels;
+    return coinCounter(amount);
+  }
 
 }
