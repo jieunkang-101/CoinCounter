@@ -10,21 +10,29 @@ export const coinCounter = (amount) => {
     // amount = Math.fround(amount % .25).toPrecision(2);
     amount = parseFloat(amount % .25).toPrecision(2);
     //return coinPurse.quaters;
-    return coinCounter(amount);
+    //return coinCounter(amount);
   }
 
   if (amount >= .1) {
     coinPurse.dimes = Math.floor(amount / .1);
     amount = parseFloat(amount % .1).toPrecision(2);
     //return coinPurse.dimes;
-    return coinCounter(amount);
+    //return coinCounter(amount);
   }
 
   if (amount >= .05) {
     coinPurse.nickels = Math.floor(amount / .05);
     amount = parseFloat(amount % .05).toPrecision(2);
     //return coinPurse.nickels;
-    return coinCounter(amount);
+    //return coinCounter(amount);
   }
 
+  if (amount >= .01) {
+    coinPurse.pennies = Math.floor(amount / .01);
+    amount = parseFloat(amount % .01).toPrecision(2);
+    //return coinPurse.pennies;
+    //return coinCounter(amount);
+  }
+
+  return coinPurse;
 }

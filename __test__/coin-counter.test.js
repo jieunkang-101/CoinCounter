@@ -21,4 +21,9 @@ describe('coinCounter', () => {
     const userAmount = coinCounter(7.44);
     expect(userAmount).toEqual(1);
   });
+
+  test('should determine the exact amount of change needed in pennies', () => {
+    const userAmount = coinCounter(7.44);
+    expect(userAmount).toEqual(4);
+  });
 });
